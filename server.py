@@ -159,3 +159,6 @@ def generate_caption():
 if __name__ == '__main__':
     # 本地开发时使用
     app.run(host='0.0.0.0', port=5001, debug=True)
+else:
+    # Vercel 部署时使用
+    app = app
