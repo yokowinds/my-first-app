@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>朋友圈素材生成器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>朋友圈素材生成器</h1>
+        
+        <div class="upload-section">
+            <div id="dropZone" class="drop-zone">
+                <div class="upload-hint">
+                    <img src="upload-icon.png" alt="上传图标" id="uploadIcon">
+                    <p>点击或拖拽图片到这里</p>
+                    <p class="small">最多9张图片，每张不超过5MB</p>
+                </div>
+                <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
+            </div>
+            
+            <div id="imagePreview" class="image-preview">
+                <!-- 图片预览将在这里显示 -->
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="generateBtn" class="primary-button" disabled>生成文案</button>
+            <button id="copyBtn" class="secondary-button" disabled>复制文案</button>
+        </div>
+
+        <div class="result-section">
+            <div id="loadingText" class="loading-text" style="display: none;">
+                正在生成精美文案...
+            </div>
+            <div id="resultText" class="result-text">
+                <!-- 生成的文案将在这里显示 -->
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
